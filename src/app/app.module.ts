@@ -1,0 +1,27 @@
+import { BrowserModule } from '@angular/platform-browser';
+import { NgModule } from '@angular/core';
+import { FormsModule } from '@angular/forms';
+import { HttpModule } from '@angular/http';
+import { Routes, RouterModule } from '@angular/router';
+
+import { AppComponent } from './app.component';
+import { ProductListComponent } from './product-list/product-list.component';
+
+const routes: Routes = [ // 更新
+  { path: '', component: ProductListComponent },
+];
+
+@NgModule({
+  declarations: [
+    AppComponent,
+    ProductListComponent
+  ],
+  imports: [
+    BrowserModule,
+    FormsModule,
+    HttpModule
+  ],
+  providers: [],
+  bootstrap: [AppComponent]
+})
+export class AppModule { }
